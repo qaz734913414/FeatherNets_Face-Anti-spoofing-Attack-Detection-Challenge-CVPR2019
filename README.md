@@ -1,8 +1,13 @@
 ## FeatherNets for [Face Anti-spoofing Attack Detection Challenge@CVPR2019](https://competitions.codalab.org/competitions/20853#results)[1]
 
-# Params only 0.35M!! FLOPs 80M !!
+## The detail in our paper：[FeatherNets: Convolutional Neural Networks as Light as Feather for Face Anti-spoofing](https://arxiv.org/pdf/1904.09290)
 
+# FeatherNetB Inference Time **1.87ms** In CPU(i7,OpenVINO)
 
+# Params only 0.35M!! FLOPs 80M !! 
+
+In the first phase,we only use depth data for training ,and after ensemble ACER reduce to 0.0.
+But in the test phase, when we only use depth data, the best ACER is 0.0016.This result is not very satisfactory. If the security is not very high, just using single-mode data is a very good choice. In order to achieve better results, we use IR data to jointly predict the final result.
 # Results on the validation set
 
 |model name | ACER|TPR@FPR=10E-2|TPR@FPR=10E-3|FP|FN|epoch|params|FLOPs|
@@ -20,7 +25,13 @@
 |**Ensembled all**|0.0000|1.0|1.0|0|0|-|-|-|
 
 
+## Recent Update
 
+**2019.4.4**: updata data/fileList.py
+
+**2019.3.10**:code upload for the origanizers to reproduce.
+
+**2019.4.23**:add our paper FeatherNets
 
 # Prerequisites
 
@@ -61,11 +72,10 @@ Download and unzip our private Dataset into the ./data directory. Then run data/
 
 # Train the model
 
-### Download pretrained models
+### Download pretrained models(trained on ImageNet2012)
 download [fishnet150](https://pan.baidu.com/s/1uOEFsBHIdqpDLrbfCZJGUg) pretrained model from [FishNet150 repo](https://github.com/kevin-ssy/FishNet)(Model trained without tricks )
 
-download [mobilenetv2](https://drive.google.com/open?id=1jlto6HRVD3ipNkAl1lNhDbkBp7HylaqR) pretrained model from [MobileNet V2 repo](https://github.com/tonylins/pytorch-mobilenet-v2)
-
+download [mobilenetv2](https://drive.google.com/open?id=1jlto6HRVD3ipNkAl1lNhDbkBp7HylaqR) pretrained model from [MobileNet V2 repo](https://github.com/tonylins/pytorch-mobilenet-v2),or download from here,link: https://pan.baidu.com/s/11Hz50zlMyp3gtR9Bhws-Dg password: gi46 
 **move them to  ./checkpoints/pre-trainedModels/**
 
 
