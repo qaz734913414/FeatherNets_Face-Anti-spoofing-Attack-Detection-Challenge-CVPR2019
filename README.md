@@ -30,6 +30,8 @@ Link:https://pan.baidu.com/s/1vlKePiWYFYNxefD9Ld16cQ
 Key:xzv8
 
 decryption key: OTC-MMFD-11846496
+[Google Dirve](https://drive.google.com/open?id=1F_du_iarTepKKYgXpk_cJNGRb34rlJ5c)
+
 ## Recent Update
 
 **2019.4.4**: updata data/fileList.py
@@ -39,6 +41,8 @@ decryption key: OTC-MMFD-11846496
 **2019.4.23**:add our paper FeatherNets
 
 **2019.8.4**: release our model checkpoint
+
+**2019.09.25**: early mutilmodal method
 
 # Prerequisites
 
@@ -141,3 +145,7 @@ You can download my artifacts folder which I used to generate my final submissio
 >[1] ChaLearn Face Anti-spoofing Attack Detection Challenge@CVPR2019,[link](https://competitions.codalab.org/competitions/20853?secret_key=ff0e7c30-e244-4681-88e4-9eb5b41dd7f7)
 
 >[2] Shifeng Zhang, Xiaobo Wang, Ajian Liu, Chenxu Zhao, Jun Wan, Sergio Escalera, Hailin Shi, Zezheng Wang, Stan Z. Li, " CASIA-SURF: A Dataset and Benchmark for Large-scale Multi-modal Face Anti-spoofing ", arXiv, 2018 [PDF](https://arxiv.org/abs/1812.00408)
+
+# Multimodal Methods
+
+In the early days of the competition, I thought about some other multimodal methods. You can view the network structure here.(multimodal_fusion_method.md) I have not been able to continue because of limited computing resources.
